@@ -1,24 +1,28 @@
-import React from 'react';
+import React from "react";
 
-import Countdown from './';
+import Countdown from "./";
 
 export default {
-  title: 'Example/Countdown',
+  title: "Example/Countdown",
   component: Countdown,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: { control: "color" },
   },
 };
 
 const Template = (args) => <Countdown {...args} />;
 
+// modified time prop, instead of array, replaced with object with two properties: countdownTime and stopTime
+// added isRunning prop, which is a boolean.
+
 export const Paused = Template.bind({});
 Paused.args = {
-  time: [1651068508651, 1651068808651],
+  time: { stopTime: 1651068386964, countDownTime: 1651068686964 },
+  isRunning: false,
 };
 
 export const Playing = Template.bind({});
 Playing.args = {
-  time: [1651068851920], // modify this timestamp to be a future date
+  time: { countDownTime: 1651597200000 }, // modify this timestamp to be a future date
+  isRunning: true,
 };
-

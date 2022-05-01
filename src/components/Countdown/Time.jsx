@@ -1,7 +1,7 @@
 import React from "react";
-import { StyledTime } from "../styles";
+import { StyledTime } from "./styles";
 
-import { normalizeToTwoNumbers } from "../helper";
+import { normalizeToTwoNumbers } from "../../utils";
 
 function Time({ time: { textDay, textHour, textMinute, textSecond } }) {
   return (
