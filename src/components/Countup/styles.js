@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Time = styled.p`
-  color: red;
+export const StyledTime = styled.p`
+  color: gray;
   font-size: 32px;
 `;
