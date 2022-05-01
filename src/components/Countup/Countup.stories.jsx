@@ -13,7 +13,7 @@ export default {
 const Template = (args) => <Countup {...args} />;
 
 // modified time prop, instead of array, replaced with object with two properties: startTime and stopTime
-// added isRunning prop, which is a boolean
+// added isRunning prop, which is a boolean.
 
 export const Paused = Template.bind({});
 Paused.args = {
