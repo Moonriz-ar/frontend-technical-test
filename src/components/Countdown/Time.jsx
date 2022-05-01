@@ -1,15 +1,15 @@
 import React from "react";
 import { StyledTime } from "./styles";
 
-import { normalizeToTwoNumbers } from "../../utils";
+import { normalizeToTwoNumbers, removeNegativeSign } from "../../utils";
 
 function Time({ time: { textDay, textHour, textMinute, textSecond } }) {
   return (
-    <StyledTime>{`${normalizeToTwoNumbers(textDay)} : ${normalizeToTwoNumbers(
-      textHour
-    )} : ${normalizeToTwoNumbers(textMinute)} : ${normalizeToTwoNumbers(
-      textSecond
-    )}`}</StyledTime>
+    <StyledTime>{`${normalizeToTwoNumbers(textDay)} : ${removeNegativeSign(
+      normalizeToTwoNumbers(textHour)
+    )} : ${removeNegativeSign(
+      normalizeToTwoNumbers(textMinute)
+    )} : ${removeNegativeSign(normalizeToTwoNumbers(textSecond))}`}</StyledTime>
   );
 }
 

@@ -19,3 +19,7 @@ export const convertMsToReadable = (ms) => {
 export const normalizeToTwoNumbers = (str) => {
   return str.padStart(2, "0");
 };
+
+export const removeNegativeSign = (str) => {
+  return str.replace("-", "");
+};
