@@ -6,10 +6,16 @@ export const convertMsToReadable = (ms) => {
   const day = hour * 24;
 
   const time = {
-    textDay: Math.floor(ms / day).toString(),
-    textHour: Math.floor((ms % day) / hour).toString(),
-    textMinute: Math.floor((ms % hour) / minute).toString(),
-    textSecond: Math.floor((ms % minute) / second).toString(),
+    textDay: normalizeToTwoNumbers(Math.floor(ms / day).toString()),
+    textHour: removeNegativeSign(
+      normalizeToTwoNumbers(Math.floor((ms % day) / hour).toString())
+    ),
+    textMinute: removeNegativeSign(
+      normalizeToTwoNumbers(Math.floor((ms % hour) / minute).toString())
+    ),
+    textSecond: removeNegativeSign(
+      normalizeToTwoNumbers(Math.floor((ms % minute) / second).toString())
+    ),
   };
 
   return time;
@@ -20,6 +26,7 @@ export const normalizeToTwoNumbers = (str) => {
   return str.padStart(2, "0");
 };
 
+// helper to remove negative signs, useful to remove after countdown reaches zero and starts calculating overdue time
 export const removeNegativeSign = (str) => {
   return str.replace("-", "");
 };
