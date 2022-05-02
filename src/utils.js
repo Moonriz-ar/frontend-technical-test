@@ -30,3 +30,9 @@ export const normalizeToTwoNumbers = (str) => {
 export const removeNegativeSign = (str) => {
   return str.replace("-", "");
 };
+
+export const timerImagePaths = {
+  hi: `https://res.cloudinary.com/andrealinar/image/upload/v1651454248/mokoko/mokoko-hi_tuyfki.webp`,
+  shy: `https://res.cloudinary.com/andrealinar/image/upload/v1651454248/mokoko/mokoko-shy_dhfeed.webp`,
+  nice: `https://res.cloudinary.com/andrealinar/image/upload/v1651454248/mokoko/mokoko-thumbs_y9k4xh.webp`,
+};

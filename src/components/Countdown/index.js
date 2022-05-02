@@ -4,7 +4,12 @@ import Time from "./Time";
 
 import { convertMsToReadable } from "../../utils";
 
-const Countdown = ({ time: { countDownTime, stopTime }, isRunning }) => {
+const Countdown = ({
+  time: { countDownTime, stopTime },
+  isRunning,
+  isDark,
+  variant,
+}) => {
   const [displayTime, setDisplayTime] = useState(undefined);
 
   useEffect(() => {
@@ -26,7 +31,13 @@ const Countdown = ({ time: { countDownTime, stopTime }, isRunning }) => {
     }
   }, [isRunning, countDownTime, stopTime]);
 
-  return <>{displayTime && <Time time={displayTime} />}</>;
+  return (
+    <>
+      {displayTime && (
+        <Time time={displayTime} isDark={isDark} variant={variant} />
+      )}
+    </>
+  );
 };
 
 Countdown.propTypes = {

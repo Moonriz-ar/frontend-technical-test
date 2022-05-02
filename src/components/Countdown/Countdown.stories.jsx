@@ -33,10 +33,14 @@ export const Paused = Template.bind({});
 Paused.args = {
   time: { stopTime: 1651068386964, countDownTime: 1651068686964 },
   isRunning: false,
+  isDark: false,
+  variant: "nice",
 };
 
 export const Playing = Template.bind({});
 Playing.args = {
   time: { countDownTime: 1651597200000 }, // modify this timestamp to be a future date
   isRunning: true,
+  isDark: true,
+  variant: "hi",
 };
