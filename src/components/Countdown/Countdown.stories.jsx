@@ -28,6 +28,8 @@ const Template = (args) => <Countdown {...args} />;
 
 // modified time prop, instead of array, replaced with object with two properties: countdownTime and stopTime
 // added isRunning prop, which is a boolean.
+// added isDark prop, which is a boolean.
+// added variant prop, to choose between three timer image variants: 'nice', 'hi' and 'shy'
 
 export const Paused = Template.bind({});
 Paused.args = {

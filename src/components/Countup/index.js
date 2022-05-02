@@ -4,7 +4,12 @@ import Time from "./Time";
 
 import { convertMsToReadable } from "../../utils";
 
-const Countup = ({ time: { startTime, stopTime }, isRunning }) => {
+const Countup = ({
+  time: { startTime, stopTime },
+  isRunning,
+  isDark,
+  variant,
+}) => {
   const [displayTime, setDisplayTime] = useState(undefined);
 
   useEffect(() => {
@@ -25,7 +30,13 @@ const Countup = ({ time: { startTime, stopTime }, isRunning }) => {
     }
   }, [isRunning, startTime, stopTime]);
 
-  return <>{displayTime && <Time time={displayTime} />}</>;
+  return (
+    <>
+      {displayTime && (
+        <Time time={displayTime} isDark={isDark} variant={variant} />
+      )}
+    </>
+  );
 };
 
 Countup.propTypes = {

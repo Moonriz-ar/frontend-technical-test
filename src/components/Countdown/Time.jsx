@@ -23,7 +23,6 @@ function Time({
     <>
       <StyledWrapper>
         <StyledImage src={handleTimerImagePath(variant)} alt="Timer image" />
-
         <StyledTime
           isDark={isDark}
         >{`${textDay} : ${textHour} : ${textMinute} : ${textSecond}`}</StyledTime>
