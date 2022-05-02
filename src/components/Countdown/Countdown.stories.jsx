@@ -1,5 +1,4 @@
 import React from "react";
-
 import Countdown from "./";
 
 export default {
@@ -8,6 +7,21 @@ export default {
   argTypes: {
     backgroundColor: { control: "color" },
   },
+  decorators: [
+    (Story) => (
+      <div style={{}}>
+        <head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap"
+            rel="stylesheet"
+          />
+        </head>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 const Template = (args) => <Countdown {...args} />;

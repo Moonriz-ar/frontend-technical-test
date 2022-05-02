@@ -3,7 +3,10 @@ import { StyledTime } from "./styles";
 
 function Time({ time: { textDay, textHour, textMinute, textSecond } }) {
   return (
-    <StyledTime>{`${textDay} : ${textHour} : ${textMinute} : ${textSecond}`}</StyledTime>
+    <>
+      {/* <StyledImage /> */}
+      <StyledTime>{`${textDay} : ${textHour} : ${textMinute} : ${textSecond}`}</StyledTime>
+    </>
   );
 }
 
